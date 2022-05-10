@@ -1,0 +1,26 @@
+<html>
+
+<H3 style="color:blue;">Running a Container</H3>
+<p style="font-size: 20px">When we have the container image built using the Dockerfile ready, we are ready to create a container!!! <p>
+<p style="font-size: 20px">podman create imageName should create the container.<p>
+<a href="https://docs.podman.io/en/latest/markdown/podman-create.1.html"> Podman Create Commands</a>
+<p style="font-size: 20px">Now we have the container create, to list the containers we can use<br>
+ podman ps<br>
+ which will get the list of the containers up and running.<br>
+podman ps -a shall be used to list all the created containers. 
+<p>
+<a href="https://docs.podman.io/en/latest/markdown/podman-ps.1.html"> Podman ps Commands </a>
+<p style="font-size: 20px"> Now we have the Container Image and Container Created out of the Image. Lets go ahead an run the container</p>
+<p style="font-size: 20px">
+podman start containerName/Image will start the Container.<br>
+Now lets run podman ps and it should list the container which we have started.
+</p>
+
+<p style="font-size: 20px">podman start will start any stopped container and this includes freshly created containers.<br>
+podman run is the combination of create and start. it creates the container and start it.<br>
+podman run -d -p 8080:8080 --name sriram-presentation imageName/ID:tag<br>
+-d is to used to detach the container and run it in background<br>
+-p is used to bind the container port to the host port.
+</p>
+<a href="https://docs.podman.io/en/latest/markdown/podman-run.1.html"> Podman Run Commands </a>
+</html>

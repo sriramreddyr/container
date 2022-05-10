@@ -1,0 +1,17 @@
+<html>
+<p style="font-size: 20px">
+So Far we spoke lot about container like what are container, how they are build and run using the container images.<br>
+Now lets take an Example.<br>
+
+I have spun up a container from a container image and installed Command line tool CURL inside the continer. Later i have stopped the container and removed the container.
+Now i have spunned up another container using the same image, now will i have curl already installed in the container. No.<br>
+
+<h3> Thus container are Ephemeral.</h3>
+<p style="font-size: 20px"> The Changes made inside the containers exists as long as the container is up & running. Once the container is removed the changes are also gone.<br>
+Then how to make the changes persistent.<br>
+From the above example, to make curl available in the newly created container we need to add it to the Dockerfile used to create the Container image.<br>
+So that We ever a new container is created using the same image it has the curl already installed in the container. 
+
+</p>
+</html>
+

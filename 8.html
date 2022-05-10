@@ -1,0 +1,11 @@
+<html>
+<h3 style="color:blue;"> Environment Variables in the Container</h3> 
+<p style="font-size: 20px">Another popular way to externalize configuration, is through the use of ENVironmental variables.</p>
+<p style="font-size: 20px">Environment variables allow you to decouple the configuration from the applications executable. For example, you wouldnt want to store your production database password in your codebase if you did, it would be visible from Git, and anyone with access to your code could take down your database</p>
+<p style="font-size: 20px">Instead, you set it with an environment variable, which stores a simple key-value pair, and allows you to access the value in any application running in the same shell session (they are not globally accessible).  This also has the benefit of being able to easily define different configuration for different environments. For example, having separate keys for development and production databases, or using a different API endpoint.</p>
+<p style="font-size: 20px">docker run, accepts ENV variables as arguments. Simply run it with the -e flag, shorthand for --env, and pass in the key=value pair:</p>
+<p style="font-size: 20px">sudo docker run <br>
+-e POSTGRES_USER='postgres'<br> 
+-e POSTGRES_PASSWORD='password'</p>
+<p style="font-size: 20px"></p>
+</html>

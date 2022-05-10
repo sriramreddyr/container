@@ -1,0 +1,22 @@
+<html>
+
+<H3 style="color:blue;">Container Image</H3>
+<p style="font-size: 20px">A container image is a static file with executable code that can create a container on a computing system.</p>
+<p style="font-size: 20px">A container image is immutable meaning it cannot be changed, and can be deployed consistently in any environment.</p>
+<p style="font-size: 20px">It is a core component of a containerized architecture.</p>
+
+<h3 style="color:blue;">What Are Docker Image Layers?</h3>
+<p style="font-size: 20px">Each layer is an image itself, just one without a human-assigned tag. They have auto-generated IDs though.</p>
+<p style="font-size: 20px">Each instruction in a Dockerfile results in a layer.</p>
+<p style="font-size: 20px">All the layers created by a Dockerfile are read only  they are immutable. This is needed, so they can be reused.</p>
+<p style="font-size: 20px">The first Layer, being the root layer or base layer, usually contains the big bulk of what goes into the image.</p>
+<p style="font-size: 20px">The rest of the layers are the modifications to be applied of the root layer</p>
+<p style="font-size: 20px">Using podman/docker history imageID/imageName one have see the layers of a container image </p>
+
+<h3 style="color:blue;">Container Registries</h3>
+<p style="font-size: 20px">A container registry is a catalog of storage locations where you can push and pull container images.However, the actual physical locations where images are stored are known as repositories. Each repository stores a collection of related images with the same name.Each image within a repository represents a different version of the same container deployment.</p>
+<p style="font-size: 20px">Docker Hub Container Registry is one of the popular registry</p>
+<p style="font-size: 20px">docker pull/push imageName:tag commands can be used to pull or push images from the container registry repositories.</p>
+<p style="font-size: 20px">default tag would be latest</p>
+<p style="font-size: 20px"></p>
+</html>

@@ -1,0 +1,23 @@
+<html>
+
+<H3 style="color:blue;">Pushing an Image to the Registry</H3>
+<p style="font-size: 20px"> Now we have the application built into the image and ready for the deployment.<br>
+We need this image to be pushed to the container registry for safe keeping and accessible by others
+</p>
+<p style="font-size: 20px">Now lets try to push this image to the docker registry</p>
+<p style="font-size: 20px">Before trying to push the image to the docker, we first need to tag the image to the username and the name space where the image has to go</p>
+<p style="font-size: 20px">So lets tag it using podman tag sriram-persentation:latest sriramreddyr/presentation:latest</p>
+<p style="font-size: 20px">Now try Podman images, you will see 2 images sriram-persentation & sriramreddyr/presentation. If you check at the imageID of both the images, it will be same</p>
+<p style="font-size: 20px">Now we have our image ready and tagged. <br>
+podman push sriramreddyr/presentation will push my image to the docker registry. Since we have not give any tag, it would take the default tag as latest and will append to the image name.
+</p>
+
+<p style="font-size: 20px"> Now if someone whats to pull the image they can simply<br>
+
+podman pull sriramreddyr/presentation:latest and get the container image.
+</p>
+<p style="font-size: 20px">And if we were to push this to a private registry, we could also tag the Image with the full repository name.</p>
+<a href="https://docs.podman.io/en/latest/markdown/podman-tag.1.html"> Podman Tag Commands </a> |
+<a href="https://docs.podman.io/en/latest/markdown/podman-push.1.html"> Podman Push Commands </a> |
+<a href="https://docs.podman.io/en/latest/markdown/podman-pull.1.html"> Podman Pull Commands </a>
+</html>

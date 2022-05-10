@@ -1,0 +1,14 @@
+<html>
+<h3 style="color:blue;"> Volume Mounting </h3>
+<p style="font-size: 20px">
+Now we know how to many a Container Persistent and have the required tools readily insalled once the container is created.</p>
+
+<p style="font-size: 20px">What about the applicaiton config files assocaited to the application running inside the container.</p>
+
+<p style="font-size: 20px">Lets take an example, we have an application running inside the container which needs to interact with the bankend datebase using the database credentials. Now you have a requirement to change the username/password to connect to the database. </p>
+
+<p style="font-size: 20px">This can be done effectively by creating a datavolumes and have the datavolume mounted to the container while creation.</p>
+<p style="font-size: 20px"> In this datavolumes which can store all the app config files and can make the change to config file without effecting the state of the container.</p>
+
+<a href="https://docs.podman.io/en/latest/markdown/podman-volume-mount.1.html"> Podman mount</a>
+</html>

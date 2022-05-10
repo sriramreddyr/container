@@ -1,0 +1,17 @@
+<html>
+
+<H3 style="color:blue;">Building a Container</H3>
+<p style="font-size: 20px">Images can build be automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image.</p>
+<p style="font-size: 20px">An image can be build using the command </p> 
+
+<p style="font-size: 15px">docker build . -t imageName:tag<p>
+<a href="https://docs.podman.io/en/latest/markdown/podman-build.1.html">podman build commands</a>
+<p style="font-size: 20px"> Below is the a sample dockerfile to build an image. </p>
+<p style="font-size: 15px">FROM ubuntu:latest <br>
+RUN apt-get update && apt-get install apache2 -y <br>
+RUN rm /var/www/html/index.html <br>
+COPY myfile /etc/apache/myfile.conf <br>
+<p>
+
+<p style="font-size: 20px">podman images (<a href="https://docs.podman.io/en/latest/markdown/podman-images.1.html"> podman images command</a>) Should list the image built out of the Dockerfile</p>
+</html>
